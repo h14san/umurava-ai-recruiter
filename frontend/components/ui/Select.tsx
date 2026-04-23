@@ -1,5 +1,6 @@
 "use client";
 import { forwardRef, type SelectHTMLAttributes } from "react";
+import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
@@ -15,21 +16,27 @@ export const Select = forwardRef<HTMLSelectElement, Props>(function Select(
   return (
     <label className="block" htmlFor={selectId}>
       {label && (
-        <span className="mb-1 block text-sm font-medium text-slate-700">{label}</span>
+        <span className="mb-1.5 block text-xs font-medium text-primary">{label}</span>
       )}
-      <select
-        id={selectId}
-        ref={ref}
-        className={cn(
-          "w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20",
-          error && "border-red-400 focus:border-red-500",
-          className
-        )}
-        {...rest}
-      >
-        {children}
-      </select>
-      {error && <span className="mt-1 block text-xs text-red-600">{error}</span>}
+      <div className="relative">
+        <select
+          id={selectId}
+          ref={ref}
+          className={cn(
+            "app-input appearance-none px-3 pr-9 text-sm",
+            error && "border-[var(--danger)] focus:border-[var(--danger)] focus:ring-[var(--danger)]/25",
+            className
+          )}
+          {...rest}
+        >
+          {children}
+        </select>
+        <ChevronDown
+          size={16}
+          className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted"
+        />
+      </div>
+      {error && <span className="mt-1 block text-xs text-[var(--danger)]">{error}</span>}
     </label>
   );
 });

@@ -11,12 +11,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
     "@reduxjs/toolkit": "^2.2.7",
     "clsx": "^2.1.1",
     "lucide-react": "^0.424.0",
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hot-toast": "^2.6.0",
     "react-redux": "^9.1.2"
   },
   "devDependencies": {

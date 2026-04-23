@@ -9,22 +9,32 @@ import { ErrorMessage } from "@/components/ui/ErrorMessage";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { JobList } from "@/components/jobs/JobList";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { fetchApplicants } from "@/store/slices/applicantsSlice";
 import { fetchJobs } from "@/store/slices/jobsSlice";
 
 export default function JobsPage() {
   const dispatch = useAppDispatch();
-  const { list, status, error } = useAppSelector((s) => s.jobs);
+  const { list, status, error } = useAppSelector((state) => state.jobs);
+  const applicantsByJob = useAppSelector((state) => state.applicants.byJobId);
 
   useEffect(() => {
-    dispatch(fetchJobs());
+    void dispatch(fetchJobs());
   }, [dispatch]);
 
+  useEffect(() => {
+    list.forEach((job) => {
+      if (!applicantsByJob[job._id]) {
+        void dispatch(fetchApplicants(job._id));
+      }
+    });
+  }, [applicantsByJob, dispatch, list]);
+
   return (
-    <div className="mx-auto max-w-4xl">
+    <div className="flex min-h-full flex-col px-4 py-5 md:px-6">
       <div className="mb-6 flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-semibold text-slate-900">Jobs</h1>
-          <p className="text-sm text-slate-500">Create and screen job postings.</p>
+          <h1 className="text-[20px]">Jobs</h1>
+          <p className="text-sm text-muted">Create roles and launch AI-led shortlisting.</p>
         </div>
         <Link href="/jobs/new">
           <Button>
@@ -35,7 +45,7 @@ export default function JobsPage() {
       </div>
 
       {status === "loading" && list.length === 0 && (
-        <div className="flex justify-center py-12">
+        <div className="flex flex-1 items-center justify-center py-12">
           <LoadingSpinner size={28} />
         </div>
       )}
@@ -43,19 +53,21 @@ export default function JobsPage() {
       <ErrorMessage message={error} />
 
       {status !== "loading" && list.length === 0 && !error && (
-        <EmptyState
-          icon={Briefcase}
-          title="No jobs yet"
-          description="Create your first job posting to begin screening Umurava talent."
-          action={
-            <Link href="/jobs/new">
-              <Button>
-                <Plus size={16} />
-                Create job
-              </Button>
-            </Link>
-          }
-        />
+        <div className="flex flex-1 items-center justify-center">
+          <EmptyState
+            icon={Briefcase}
+            title="No jobs yet"
+            description="Create your first job to start screening candidates with AI."
+            action={
+              <Link href="/jobs/new">
+                <Button>
+                  <Plus size={16} />
+                  New Job
+                </Button>
+              </Link>
+            }
+          />
+        </div>
       )}
 
       {list.length > 0 && <JobList jobs={list} />}

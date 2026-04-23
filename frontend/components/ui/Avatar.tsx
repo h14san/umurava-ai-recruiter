@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 export function Avatar({
   firstName,
   lastName,
-  size = 40,
+  size = 36,
   className,
 }: {
   firstName: string;
@@ -11,14 +11,14 @@ export function Avatar({
   size?: number;
   className?: string;
 }) {
-  const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
+  const initials = `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase() || "?";
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-full bg-brand-100 font-semibold text-brand-700",
+        "flex shrink-0 items-center justify-center rounded-full bg-[var(--accent)] font-semibold text-white",
         className
       )}
-      style={{ width: size, height: size, fontSize: size * 0.4 }}
+      style={{ width: size, height: size, fontSize: size * 0.38 }}
     >
       {initials}
     </div>

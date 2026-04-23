@@ -1,33 +1,42 @@
 "use client";
-import { forwardRef, type InputHTMLAttributes } from "react";
+import { forwardRef, type InputHTMLAttributes, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
+  leadingIcon?: ReactNode;
 }
 
 export const Input = forwardRef<HTMLInputElement, Props>(function Input(
-  { label, error, className, id, ...rest },
+  { label, error, className, id, leadingIcon, ...rest },
   ref
 ) {
   const inputId = id ?? rest.name;
   return (
     <label className="block" htmlFor={inputId}>
       {label && (
-        <span className="mb-1 block text-sm font-medium text-slate-700">{label}</span>
+        <span className="mb-1.5 block text-xs font-medium text-primary">{label}</span>
       )}
-      <input
-        id={inputId}
-        ref={ref}
-        className={cn(
-          "w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20",
-          error && "border-red-400 focus:border-red-500 focus:ring-red-500/20",
-          className
+      <div className="relative">
+        {leadingIcon && (
+          <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-muted">
+            {leadingIcon}
+          </span>
         )}
-        {...rest}
-      />
-      {error && <span className="mt-1 block text-xs text-red-600">{error}</span>}
+        <input
+          id={inputId}
+          ref={ref}
+          className={cn(
+            "app-input px-3 text-sm",
+            leadingIcon && "pl-9",
+            error && "border-[var(--danger)] focus:border-[var(--danger)] focus:ring-[var(--danger)]/25",
+            className
+          )}
+          {...rest}
+        />
+      </div>
+      {error && <span className="mt-1 block text-xs text-[var(--danger)]">{error}</span>}
     </label>
   );
 });

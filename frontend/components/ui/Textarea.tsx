@@ -8,26 +8,27 @@ interface Props extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 export const Textarea = forwardRef<HTMLTextAreaElement, Props>(function Textarea(
-  { label, error, className, id, ...rest },
+  { label, error, className, id, rows = 5, ...rest },
   ref
 ) {
   const textareaId = id ?? rest.name;
   return (
     <label className="block" htmlFor={textareaId}>
       {label && (
-        <span className="mb-1 block text-sm font-medium text-slate-700">{label}</span>
+        <span className="mb-1.5 block text-xs font-medium text-primary">{label}</span>
       )}
       <textarea
         id={textareaId}
         ref={ref}
+        rows={rows}
         className={cn(
-          "w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-600/20",
-          error && "border-red-400 focus:border-red-500 focus:ring-red-500/20",
+          "app-input min-h-[120px] resize-y px-3 py-2.5 text-sm",
+          error && "border-[var(--danger)] focus:border-[var(--danger)] focus:ring-[var(--danger)]/25",
           className
         )}
         {...rest}
       />
-      {error && <span className="mt-1 block text-xs text-red-600">{error}</span>}
+      {error && <span className="mt-1 block text-xs text-[var(--danger)]">{error}</span>}
     </label>
   );
 });
