@@ -1,0 +1,37 @@
+{
+  "firstName": "David",
+  "lastName": "Mugisha",
+  "email": "david.mugisha@example.com",
+  "headline": ".NET Backend Developer",
+  "bio": "6 years C# and SQL Server. Never used Node.js or Postgres.",
+  "location": "Kigali, Rwanda",
+  "skills": [
+    { "name": "C#", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": ".NET", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "SQL Server", "level": "Advanced", "yearsOfExperience": 6 },
+    { "name": "REST APIs", "level": "Advanced", "yearsOfExperience": 6 },
+    { "name": "Azure", "level": "Intermediate", "yearsOfExperience": 3 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Kinyarwanda", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Bank of Kigali",
+      "role": "Senior .NET Developer",
+      "startDate": "2018-05",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Core banking modules in C#/ASP.NET with SQL Server.",
+      "technologies": ["C#", ".NET", "SQL Server"]
+    }
+  ],
+  "education": [
+    { "institution": "University of Rwanda", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2013, "endYear": 2017 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/david-mugisha", "github": "", "portfolio": "" }
+}

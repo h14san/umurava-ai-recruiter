@@ -1,0 +1,40 @@
+{
+  "firstName": "Leila",
+  "lastName": "Hassan",
+  "email": "leila.hassan@example.com",
+  "headline": "DevOps Engineer → Transitioning to Backend",
+  "bio": "5 years DevOps (Docker, K8s). Learning Node.js + Postgres over the last year.",
+  "location": "Dar es Salaam, Tanzania",
+  "skills": [
+    { "name": "Docker", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "Kubernetes", "level": "Expert", "yearsOfExperience": 4 },
+    { "name": "Node.js", "level": "Intermediate", "yearsOfExperience": 1 },
+    { "name": "TypeScript", "level": "Beginner", "yearsOfExperience": 1 },
+    { "name": "PostgreSQL", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "REST APIs", "level": "Intermediate", "yearsOfExperience": 1 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Swahili", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Vodacom Tanzania",
+      "role": "DevOps Engineer",
+      "startDate": "2019-09",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Own container platform for 40+ internal services. Recently helping build a new Node.js BFF.",
+      "technologies": ["Docker", "Kubernetes", "Node.js", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    { "institution": "University of Dar es Salaam", "degree": "B.Sc.", "fieldOfStudy": "Information Systems", "startYear": 2014, "endYear": 2018 }
+  ],
+  "certifications": [
+    { "name": "Certified Kubernetes Administrator", "issuer": "CNCF", "issueDate": "2022-03" }
+  ],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-07-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/leila-hassan", "github": "https://github.com/leila-hassan", "portfolio": "" }
+}

@@ -1,0 +1,36 @@
+{
+  "firstName": "Peace",
+  "lastName": "Mukasa",
+  "email": "peace.mukasa@example.com",
+  "headline": "QA / Manual Tester",
+  "bio": "Manual QA with basic Postman knowledge. Not a developer.",
+  "location": "Kampala, Uganda",
+  "skills": [
+    { "name": "Manual Testing", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "Postman", "level": "Intermediate", "yearsOfExperience": 3 },
+    { "name": "SQL", "level": "Beginner", "yearsOfExperience": 2 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" }
+  ],
+  "experience": [
+    {
+      "company": "SafeBoda",
+      "role": "QA Engineer",
+      "startDate": "2020-09",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Manual regression testing. Write basic API smoke tests in Postman.",
+      "technologies": ["Postman"]
+    }
+  ],
+  "education": [
+    { "institution": "Makerere University", "degree": "B.Sc.", "fieldOfStudy": "Information Technology", "startYear": 2014, "endYear": 2018 }
+  ],
+  "certifications": [
+    { "name": "ISTQB Foundation Level", "issuer": "ISTQB", "issueDate": "2021-06" }
+  ],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/peace-mukasa", "github": "", "portfolio": "" }
+}

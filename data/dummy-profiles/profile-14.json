@@ -1,0 +1,36 @@
+{
+  "firstName": "Blessing",
+  "lastName": "Adebayo",
+  "email": "blessing.adebayo@example.com",
+  "headline": "PHP / Laravel Developer",
+  "bio": "5 years PHP/Laravel building small-business web apps. No Node.js.",
+  "location": "Ibadan, Nigeria",
+  "skills": [
+    { "name": "PHP", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "Laravel", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "MySQL", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "REST APIs", "level": "Intermediate", "yearsOfExperience": 3 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Yoruba", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Freelance",
+      "role": "PHP Developer",
+      "startDate": "2020-01",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Laravel e-commerce sites for local retailers.",
+      "technologies": ["PHP", "Laravel", "MySQL"]
+    }
+  ],
+  "education": [
+    { "institution": "University of Ibadan", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2015, "endYear": 2019 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Available", "type": "Contract", "startDate": "2026-05-01" },
+  "socialLinks": { "linkedin": "", "github": "https://github.com/blessing-adebayo", "portfolio": "" }
+}

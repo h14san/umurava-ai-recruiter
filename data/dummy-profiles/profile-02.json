@@ -1,0 +1,65 @@
+{
+  "firstName": "Chiamaka",
+  "lastName": "Okafor",
+  "email": "chiamaka.okafor@example.com",
+  "headline": "Staff Engineer · Distributed Systems",
+  "bio": "8 years in backend systems. Built the fraud-detection pipeline at Flutterwave handling 20M transactions/day.",
+  "location": "Nairobi, Kenya",
+  "skills": [
+    { "name": "Node.js", "level": "Expert", "yearsOfExperience": 8 },
+    { "name": "TypeScript", "level": "Expert", "yearsOfExperience": 7 },
+    { "name": "PostgreSQL", "level": "Expert", "yearsOfExperience": 8 },
+    { "name": "REST APIs", "level": "Expert", "yearsOfExperience": 8 },
+    { "name": "Docker", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "gRPC", "level": "Advanced", "yearsOfExperience": 4 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Native" },
+    { "name": "Swahili", "proficiency": "Fluent" }
+  ],
+  "experience": [
+    {
+      "company": "Flutterwave",
+      "role": "Staff Engineer",
+      "startDate": "2021-01",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Architect of fraud-detection pipeline. Designed Postgres partitioning strategy that reduced query p99 from 2s to 80ms.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker", "Kafka"]
+    },
+    {
+      "company": "Safaricom",
+      "role": "Senior Software Engineer",
+      "startDate": "2017-04",
+      "endDate": "2020-12",
+      "isCurrent": false,
+      "description": "M-Pesa integration services. Owned REST APIs used by 5M+ daily active users.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Nairobi",
+      "degree": "M.Sc.",
+      "fieldOfStudy": "Computer Science",
+      "startYear": 2014,
+      "endYear": 2016
+    }
+  ],
+  "certifications": [
+    { "name": "Google Cloud Professional Cloud Architect", "issuer": "Google Cloud", "issueDate": "2024-02" }
+  ],
+  "projects": [
+    {
+      "name": "flw-fraud-engine",
+      "description": "Real-time fraud scoring service using Postgres + Kafka.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker", "Kafka"],
+      "role": "Architect",
+      "link": "",
+      "startDate": "2022-03",
+      "endDate": "2023-06"
+    }
+  ],
+  "availability": { "status": "Available", "type": "Full-time", "startDate": "2026-05-15" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/chiamaka-okafor", "github": "https://github.com/chiamaka-okafor", "portfolio": "" }
+}

@@ -1,0 +1,40 @@
+{
+  "firstName": "Ibrahim",
+  "lastName": "Toure",
+  "email": "ibrahim.toure@example.com",
+  "headline": "Backend Engineer · Python and Node",
+  "bio": "Mid-level engineer with polyglot backend experience. Recently moved into Node.js.",
+  "location": "Abidjan, Ivory Coast",
+  "skills": [
+    { "name": "Python", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "Node.js", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "TypeScript", "level": "Beginner", "yearsOfExperience": 1 },
+    { "name": "PostgreSQL", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "REST APIs", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "Docker", "level": "Advanced", "yearsOfExperience": 4 }
+  ],
+  "languages": [
+    { "name": "French", "proficiency": "Native" },
+    { "name": "English", "proficiency": "Conversational" }
+  ],
+  "experience": [
+    {
+      "company": "Orange Africa",
+      "role": "Backend Engineer",
+      "startDate": "2019-08",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Primarily Python/Django backends with Postgres. Recently owning one Node.js microservice.",
+      "technologies": ["Python", "Django", "PostgreSQL", "Docker", "Node.js"]
+    }
+  ],
+  "education": [
+    { "institution": "INP-HB Yamoussoukro", "degree": "M.Sc.", "fieldOfStudy": "Computer Engineering", "startYear": 2014, "endYear": 2019 }
+  ],
+  "certifications": [
+    { "name": "Docker Certified Associate", "issuer": "Docker Inc.", "issueDate": "2023-04" }
+  ],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-07-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/ibrahim-toure", "github": "https://github.com/ibrahim-toure", "portfolio": "" }
+}

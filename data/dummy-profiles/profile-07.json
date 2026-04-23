@@ -1,0 +1,37 @@
+{
+  "firstName": "Samuel",
+  "lastName": "Kamau",
+  "email": "samuel.kamau@example.com",
+  "headline": "Mid-level Backend Developer",
+  "bio": "4 years Node.js + Postgres. No Docker in production yet.",
+  "location": "Nairobi, Kenya",
+  "skills": [
+    { "name": "Node.js", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "PostgreSQL", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "REST APIs", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "Docker", "level": "Beginner", "yearsOfExperience": 1 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Swahili", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Andela",
+      "role": "Backend Engineer",
+      "startDate": "2021-05",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Build REST APIs for US fintech clients. Uses Docker only in local dev, not production.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    { "institution": "JKUAT", "degree": "B.Sc.", "fieldOfStudy": "Software Engineering", "startYear": 2015, "endYear": 2019 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Available", "type": "Full-time", "startDate": "2026-05-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/samuel-kamau", "github": "https://github.com/samuel-kamau", "portfolio": "" }
+}

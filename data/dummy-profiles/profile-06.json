@@ -1,0 +1,38 @@
+{
+  "firstName": "Fatou",
+  "lastName": "Ba",
+  "email": "fatou.ba@example.com",
+  "headline": "Backend Engineer · Node.js",
+  "bio": "3 years of Node.js. Strong REST skills but limited Postgres exposure.",
+  "location": "Dakar, Senegal",
+  "skills": [
+    { "name": "Node.js", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "TypeScript", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "MongoDB", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "PostgreSQL", "level": "Beginner", "yearsOfExperience": 1 },
+    { "name": "REST APIs", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "Docker", "level": "Intermediate", "yearsOfExperience": 2 }
+  ],
+  "languages": [
+    { "name": "French", "proficiency": "Native" },
+    { "name": "English", "proficiency": "Conversational" }
+  ],
+  "experience": [
+    {
+      "company": "Wave",
+      "role": "Backend Engineer",
+      "startDate": "2022-11",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "REST services for mobile-money wallet. Primarily MongoDB, one small Postgres service.",
+      "technologies": ["Node.js", "MongoDB", "Docker"]
+    }
+  ],
+  "education": [
+    { "institution": "Cheikh Anta Diop University", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2016, "endYear": 2020 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-05-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/fatou-ba", "github": "https://github.com/fatou-ba", "portfolio": "" }
+}

@@ -1,0 +1,65 @@
+{
+  "firstName": "Kofi",
+  "lastName": "Mensah",
+  "email": "kofi.mensah@example.com",
+  "headline": "Senior Backend Engineer · TypeScript · Postgres",
+  "bio": "6 years designing REST APIs and data pipelines. Ex-MTN.",
+  "location": "Accra, Ghana",
+  "skills": [
+    { "name": "Node.js", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "PostgreSQL", "level": "Advanced", "yearsOfExperience": 6 },
+    { "name": "REST APIs", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "Docker", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "Redis", "level": "Advanced", "yearsOfExperience": 3 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Twi", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "MTN",
+      "role": "Senior Backend Engineer",
+      "startDate": "2020-08",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Own mobile-money REST API cluster. Shipped Docker-based deployment pipeline that cut release time from hours to minutes.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker", "Redis"]
+    },
+    {
+      "company": "Andela",
+      "role": "Backend Engineer",
+      "startDate": "2018-01",
+      "endDate": "2020-07",
+      "isCurrent": false,
+      "description": "Built REST backends for US-based fintech clients.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "KNUST",
+      "degree": "B.Sc.",
+      "fieldOfStudy": "Computer Engineering",
+      "startYear": 2013,
+      "endYear": 2017
+    }
+  ],
+  "certifications": [
+    { "name": "Docker Certified Associate", "issuer": "Docker Inc.", "issueDate": "2022-11" }
+  ],
+  "projects": [
+    {
+      "name": "mtn-money-gateway",
+      "description": "REST gateway for MTN Mobile Money transactions across 5 countries.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"],
+      "role": "Lead Engineer",
+      "link": "",
+      "startDate": "2022-01",
+      "endDate": "2023-12"
+    }
+  ],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/kofi-mensah", "github": "https://github.com/kofi-mensah", "portfolio": "" }
+}

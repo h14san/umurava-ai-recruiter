@@ -1,0 +1,47 @@
+{
+  "firstName": "Grace",
+  "lastName": "Wanjiru",
+  "email": "grace.wanjiru@example.com",
+  "headline": "Junior Backend Engineer · Rising Talent",
+  "bio": "2 years Node.js + Postgres. Fast learner, eager to level up.",
+  "location": "Nairobi, Kenya",
+  "skills": [
+    { "name": "Node.js", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "TypeScript", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "PostgreSQL", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "REST APIs", "level": "Advanced", "yearsOfExperience": 2 },
+    { "name": "Docker", "level": "Intermediate", "yearsOfExperience": 1 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Swahili", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Twiga Foods",
+      "role": "Junior Backend Engineer",
+      "startDate": "2024-01",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Maintain inventory REST APIs. Shipped 2 production features solo.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"]
+    }
+  ],
+  "education": [
+    { "institution": "Strathmore University", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2019, "endYear": 2023 }
+  ],
+  "certifications": [],
+  "projects": [
+    {
+      "name": "farmer-pricing-api",
+      "description": "Personal side project — REST API suggesting fair produce prices using historical data.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL"],
+      "role": "Solo",
+      "link": "",
+      "startDate": "2023-06",
+      "endDate": "2023-12"
+    }
+  ],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-05-15" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/grace-wanjiru", "github": "https://github.com/grace-wanjiru", "portfolio": "" }
+}

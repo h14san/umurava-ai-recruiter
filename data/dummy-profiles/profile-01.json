@@ -1,0 +1,65 @@
+{
+  "firstName": "Amadou",
+  "lastName": "Diallo",
+  "email": "amadou.diallo@example.com",
+  "headline": "Senior Backend Engineer · Node.js & PostgreSQL",
+  "bio": "7 years building high-throughput Node.js services. Led payments backend at Paystack scaling to 10k tx/sec.",
+  "location": "Lagos, Nigeria",
+  "skills": [
+    { "name": "Node.js", "level": "Expert", "yearsOfExperience": 7 },
+    { "name": "TypeScript", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "PostgreSQL", "level": "Expert", "yearsOfExperience": 7 },
+    { "name": "REST APIs", "level": "Expert", "yearsOfExperience": 7 },
+    { "name": "Docker", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "Kubernetes", "level": "Advanced", "yearsOfExperience": 3 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "French", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Paystack",
+      "role": "Senior Backend Engineer",
+      "startDate": "2022-03",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Lead backend for card processing microservices. Migrated monolith to PostgreSQL-sharded microservices, cut p95 latency 45%.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker", "Kubernetes", "Redis"]
+    },
+    {
+      "company": "Andela",
+      "role": "Backend Engineer",
+      "startDate": "2018-06",
+      "endDate": "2022-02",
+      "isCurrent": false,
+      "description": "Built REST APIs for talent-matching platform serving 50k+ developers.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Lagos",
+      "degree": "B.Sc.",
+      "fieldOfStudy": "Computer Science",
+      "startYear": 2013,
+      "endYear": 2017
+    }
+  ],
+  "certifications": [
+    { "name": "AWS Certified Solutions Architect - Associate", "issuer": "AWS", "issueDate": "2023-05" }
+  ],
+  "projects": [
+    {
+      "name": "paystack-ledger",
+      "description": "Double-entry ledger service backing wallet balances for 1M+ users.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"],
+      "role": "Tech Lead",
+      "link": "",
+      "startDate": "2023-01",
+      "endDate": "2023-09"
+    }
+  ],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-05-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/amadou-diallo", "github": "https://github.com/amadou-diallo", "portfolio": "" }
+}

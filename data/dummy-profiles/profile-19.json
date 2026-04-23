@@ -1,0 +1,36 @@
+{
+  "firstName": "Adaeze",
+  "lastName": "Nwosu",
+  "email": "adaeze.nwosu@example.com",
+  "headline": "Frontend Developer · React · Next.js",
+  "bio": "4 years frontend only. React, Next.js, CSS. No backend work.",
+  "location": "Abuja, Nigeria",
+  "skills": [
+    { "name": "React", "level": "Expert", "yearsOfExperience": 4 },
+    { "name": "Next.js", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "CSS", "level": "Advanced", "yearsOfExperience": 4 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Native" },
+    { "name": "Igbo", "proficiency": "Conversational" }
+  ],
+  "experience": [
+    {
+      "company": "Flutterwave",
+      "role": "Frontend Engineer",
+      "startDate": "2021-10",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Ship React dashboards for merchant analytics. Consume REST APIs, do not write them.",
+      "technologies": ["React", "Next.js", "TypeScript"]
+    }
+  ],
+  "education": [
+    { "institution": "University of Nigeria Nsukka", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2015, "endYear": 2019 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/adaeze-nwosu", "github": "https://github.com/adaeze-nwosu", "portfolio": "" }
+}

@@ -1,0 +1,35 @@
+{
+  "firstName": "Esther",
+  "lastName": "Njoroge",
+  "email": "esther.njoroge@example.com",
+  "headline": "Data Analyst · SQL & Python",
+  "bio": "Analyst, not engineer. SQL reporting, Python scripting. No REST APIs shipped.",
+  "location": "Nairobi, Kenya",
+  "skills": [
+    { "name": "SQL", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "Python", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "Tableau", "level": "Advanced", "yearsOfExperience": 3 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Swahili", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Safaricom",
+      "role": "Senior Data Analyst",
+      "startDate": "2019-02",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Dashboards and ad-hoc SQL analyses for the product team.",
+      "technologies": ["SQL", "Python", "Tableau"]
+    }
+  ],
+  "education": [
+    { "institution": "University of Nairobi", "degree": "B.Sc.", "fieldOfStudy": "Statistics", "startYear": 2014, "endYear": 2018 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-08-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/esther-njoroge", "github": "", "portfolio": "" }
+}

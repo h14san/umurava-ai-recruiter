@@ -1,0 +1,35 @@
+{
+  "firstName": "Tunde",
+  "lastName": "Oyelaran",
+  "email": "tunde.oyelaran@example.com",
+  "headline": "Mobile Engineer · Flutter · iOS",
+  "bio": "Mobile specialist. Dart, Swift, Kotlin. No backend experience.",
+  "location": "Lagos, Nigeria",
+  "skills": [
+    { "name": "Flutter", "level": "Expert", "yearsOfExperience": 4 },
+    { "name": "Dart", "level": "Expert", "yearsOfExperience": 4 },
+    { "name": "Swift", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "Kotlin", "level": "Intermediate", "yearsOfExperience": 2 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Andela",
+      "role": "Senior Mobile Engineer",
+      "startDate": "2021-07",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Build Flutter apps for US healthcare clients.",
+      "technologies": ["Flutter", "Dart", "Firebase"]
+    }
+  ],
+  "education": [
+    { "institution": "Covenant University", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2015, "endYear": 2019 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/tunde-oyelaran", "github": "https://github.com/tunde-oyelaran", "portfolio": "" }
+}

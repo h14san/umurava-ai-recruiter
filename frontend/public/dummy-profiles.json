@@ -1,0 +1,1842 @@
+[
+  {
+    "firstName": "Amadou",
+    "lastName": "Diallo",
+    "email": "amadou.diallo@example.com",
+    "headline": "Senior Backend Engineer · Node.js & PostgreSQL",
+    "bio": "7 years building high-throughput Node.js services. Led payments backend at Paystack scaling to 10k tx/sec.",
+    "location": "Lagos, Nigeria",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Expert",
+        "yearsOfExperience": 7
+      },
+      {
+        "name": "TypeScript",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Expert",
+        "yearsOfExperience": 7
+      },
+      {
+        "name": "REST APIs",
+        "level": "Expert",
+        "yearsOfExperience": 7
+      },
+      {
+        "name": "Docker",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Kubernetes",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "French",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Paystack",
+        "role": "Senior Backend Engineer",
+        "startDate": "2022-03",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Lead backend for card processing microservices. Migrated monolith to PostgreSQL-sharded microservices, cut p95 latency 45%.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "Kubernetes",
+          "Redis"
+        ]
+      },
+      {
+        "company": "Andela",
+        "role": "Backend Engineer",
+        "startDate": "2018-06",
+        "endDate": "2022-02",
+        "isCurrent": false,
+        "description": "Built REST APIs for talent-matching platform serving 50k+ developers.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Lagos",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2013,
+        "endYear": 2017
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect - Associate",
+        "issuer": "AWS",
+        "issueDate": "2023-05"
+      }
+    ],
+    "projects": [
+      {
+        "name": "paystack-ledger",
+        "description": "Double-entry ledger service backing wallet balances for 1M+ users.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "role": "Tech Lead",
+        "link": "",
+        "startDate": "2023-01",
+        "endDate": "2023-09"
+      }
+    ],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-05-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/amadou-diallo",
+      "github": "https://github.com/amadou-diallo",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Chiamaka",
+    "lastName": "Okafor",
+    "email": "chiamaka.okafor@example.com",
+    "headline": "Staff Engineer · Distributed Systems",
+    "bio": "8 years in backend systems. Built the fraud-detection pipeline at Flutterwave handling 20M transactions/day.",
+    "location": "Nairobi, Kenya",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Expert",
+        "yearsOfExperience": 8
+      },
+      {
+        "name": "TypeScript",
+        "level": "Expert",
+        "yearsOfExperience": 7
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Expert",
+        "yearsOfExperience": 8
+      },
+      {
+        "name": "REST APIs",
+        "level": "Expert",
+        "yearsOfExperience": 8
+      },
+      {
+        "name": "Docker",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "gRPC",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Flutterwave",
+        "role": "Staff Engineer",
+        "startDate": "2021-01",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Architect of fraud-detection pipeline. Designed Postgres partitioning strategy that reduced query p99 from 2s to 80ms.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "Kafka"
+        ]
+      },
+      {
+        "company": "Safaricom",
+        "role": "Senior Software Engineer",
+        "startDate": "2017-04",
+        "endDate": "2020-12",
+        "isCurrent": false,
+        "description": "M-Pesa integration services. Owned REST APIs used by 5M+ daily active users.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Nairobi",
+        "degree": "M.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2014,
+        "endYear": 2016
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Google Cloud Professional Cloud Architect",
+        "issuer": "Google Cloud",
+        "issueDate": "2024-02"
+      }
+    ],
+    "projects": [
+      {
+        "name": "flw-fraud-engine",
+        "description": "Real-time fraud scoring service using Postgres + Kafka.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "Kafka"
+        ],
+        "role": "Architect",
+        "link": "",
+        "startDate": "2022-03",
+        "endDate": "2023-06"
+      }
+    ],
+    "availability": {
+      "status": "Available",
+      "type": "Full-time",
+      "startDate": "2026-05-15"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/chiamaka-okafor",
+      "github": "https://github.com/chiamaka-okafor",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Kofi",
+    "lastName": "Mensah",
+    "email": "kofi.mensah@example.com",
+    "headline": "Senior Backend Engineer · TypeScript · Postgres",
+    "bio": "6 years designing REST APIs and data pipelines. Ex-MTN.",
+    "location": "Accra, Ghana",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Advanced",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "REST APIs",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "Docker",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Redis",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Twi",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "MTN",
+        "role": "Senior Backend Engineer",
+        "startDate": "2020-08",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Own mobile-money REST API cluster. Shipped Docker-based deployment pipeline that cut release time from hours to minutes.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "Redis"
+        ]
+      },
+      {
+        "company": "Andela",
+        "role": "Backend Engineer",
+        "startDate": "2018-01",
+        "endDate": "2020-07",
+        "isCurrent": false,
+        "description": "Built REST backends for US-based fintech clients.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "KNUST",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Engineering",
+        "startYear": 2013,
+        "endYear": 2017
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Docker Certified Associate",
+        "issuer": "Docker Inc.",
+        "issueDate": "2022-11"
+      }
+    ],
+    "projects": [
+      {
+        "name": "mtn-money-gateway",
+        "description": "REST gateway for MTN Mobile Money transactions across 5 countries.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "role": "Lead Engineer",
+        "link": "",
+        "startDate": "2022-01",
+        "endDate": "2023-12"
+      }
+    ],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/kofi-mensah",
+      "github": "https://github.com/kofi-mensah",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Aisha",
+    "lastName": "Nkurunziza",
+    "email": "aisha.nkurunziza@example.com",
+    "headline": "Senior Backend Engineer · Rwanda",
+    "bio": "5 years building Node.js + Postgres services. Currently at Andela Rwanda.",
+    "location": "Kigali, Rwanda",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "REST APIs",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Docker",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "GraphQL",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Kinyarwanda",
+        "proficiency": "Native"
+      },
+      {
+        "name": "French",
+        "proficiency": "Conversational"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Andela",
+        "role": "Senior Backend Engineer",
+        "startDate": "2021-09",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Lead a 4-engineer pod building Postgres-backed REST APIs for enterprise clients.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ]
+      },
+      {
+        "company": "Bank of Kigali",
+        "role": "Backend Engineer",
+        "startDate": "2019-03",
+        "endDate": "2021-08",
+        "isCurrent": false,
+        "description": "Core-banking integrations — payment reconciliation and nightly batch jobs.",
+        "technologies": [
+          "Node.js",
+          "PostgreSQL",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Rwanda",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Software Engineering",
+        "startYear": 2014,
+        "endYear": 2018
+      }
+    ],
+    "certifications": [],
+    "projects": [
+      {
+        "name": "rwanda-tax-api",
+        "description": "Open-source REST API wrapper around the Rwanda Revenue Authority taxpayer verification endpoint.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "role": "Creator",
+        "link": "",
+        "startDate": "2023-06",
+        "endDate": "2023-11"
+      }
+    ],
+    "availability": {
+      "status": "Available",
+      "type": "Full-time",
+      "startDate": "2026-05-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/aisha-nkurunziza",
+      "github": "https://github.com/aisha-nkurunziza",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Tendai",
+    "lastName": "Moyo",
+    "email": "tendai.moyo@example.com",
+    "headline": "Senior Software Engineer · Distributed APIs",
+    "bio": "6 years shipping production Node.js backends. Deep Postgres + Docker experience.",
+    "location": "Kampala, Uganda",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "REST APIs",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "Docker",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "AWS",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Ericsson Africa",
+        "role": "Senior Engineer",
+        "startDate": "2020-04",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Build telco OSS/BSS REST APIs. Owner of Postgres schema serving 20+ internal services.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker",
+          "AWS"
+        ]
+      },
+      {
+        "company": "Safaricom",
+        "role": "Backend Engineer",
+        "startDate": "2018-01",
+        "endDate": "2020-03",
+        "isCurrent": false,
+        "description": "M-Pesa merchant-onboarding REST service.",
+        "technologies": [
+          "Node.js",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Makerere University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2013,
+        "endYear": 2017
+      }
+    ],
+    "certifications": [
+      {
+        "name": "AWS Certified Developer - Associate",
+        "issuer": "AWS",
+        "issueDate": "2022-08"
+      }
+    ],
+    "projects": [
+      {
+        "name": "oss-bss-gateway",
+        "description": "Gateway microservice unifying 12 telco backends behind one REST API.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "role": "Tech Lead",
+        "link": "",
+        "startDate": "2022-06",
+        "endDate": "2023-08"
+      }
+    ],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-15"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/tendai-moyo",
+      "github": "https://github.com/tendai-moyo",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Fatou",
+    "lastName": "Ba",
+    "email": "fatou.ba@example.com",
+    "headline": "Backend Engineer · Node.js",
+    "bio": "3 years of Node.js. Strong REST skills but limited Postgres exposure.",
+    "location": "Dakar, Senegal",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "MongoDB",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "REST APIs",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "Docker",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      }
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "proficiency": "Native"
+      },
+      {
+        "name": "English",
+        "proficiency": "Conversational"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Wave",
+        "role": "Backend Engineer",
+        "startDate": "2022-11",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "REST services for mobile-money wallet. Primarily MongoDB, one small Postgres service.",
+        "technologies": [
+          "Node.js",
+          "MongoDB",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Cheikh Anta Diop University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2016,
+        "endYear": 2020
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-05-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/fatou-ba",
+      "github": "https://github.com/fatou-ba",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Samuel",
+    "lastName": "Kamau",
+    "email": "samuel.kamau@example.com",
+    "headline": "Mid-level Backend Developer",
+    "bio": "4 years Node.js + Postgres. No Docker in production yet.",
+    "location": "Nairobi, Kenya",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "REST APIs",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Docker",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Andela",
+        "role": "Backend Engineer",
+        "startDate": "2021-05",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Build REST APIs for US fintech clients. Uses Docker only in local dev, not production.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "JKUAT",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Software Engineering",
+        "startYear": 2015,
+        "endYear": 2019
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Available",
+      "type": "Full-time",
+      "startDate": "2026-05-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/samuel-kamau",
+      "github": "https://github.com/samuel-kamau",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Nneka",
+    "lastName": "Eze",
+    "email": "nneka.eze@example.com",
+    "headline": "Full-Stack Engineer · React + Node",
+    "bio": "4 years full-stack. 60% frontend, 40% backend. Knows Postgres but mostly uses ORMs.",
+    "location": "Lagos, Nigeria",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "REST APIs",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Docker",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "React",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native"
+      },
+      {
+        "name": "Igbo",
+        "proficiency": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Paystack",
+        "role": "Full-Stack Engineer",
+        "startDate": "2021-06",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Split time between dashboard UI and supporting Node services.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Covenant University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2015,
+        "endYear": 2019
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/nneka-eze",
+      "github": "https://github.com/nneka-eze",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Ibrahim",
+    "lastName": "Toure",
+    "email": "ibrahim.toure@example.com",
+    "headline": "Backend Engineer · Python and Node",
+    "bio": "Mid-level engineer with polyglot backend experience. Recently moved into Node.js.",
+    "location": "Abidjan, Ivory Coast",
+    "skills": [
+      {
+        "name": "Python",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "TypeScript",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "REST APIs",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Docker",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      }
+    ],
+    "languages": [
+      {
+        "name": "French",
+        "proficiency": "Native"
+      },
+      {
+        "name": "English",
+        "proficiency": "Conversational"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Orange Africa",
+        "role": "Backend Engineer",
+        "startDate": "2019-08",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Primarily Python/Django backends with Postgres. Recently owning one Node.js microservice.",
+        "technologies": [
+          "Python",
+          "Django",
+          "PostgreSQL",
+          "Docker",
+          "Node.js"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "INP-HB Yamoussoukro",
+        "degree": "M.Sc.",
+        "fieldOfStudy": "Computer Engineering",
+        "startYear": 2014,
+        "endYear": 2019
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Docker Certified Associate",
+        "issuer": "Docker Inc.",
+        "issueDate": "2023-04"
+      }
+    ],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-07-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/ibrahim-toure",
+      "github": "https://github.com/ibrahim-toure",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Wanjiru",
+    "email": "grace.wanjiru@example.com",
+    "headline": "Junior Backend Engineer · Rising Talent",
+    "bio": "2 years Node.js + Postgres. Fast learner, eager to level up.",
+    "location": "Nairobi, Kenya",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "TypeScript",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "REST APIs",
+        "level": "Advanced",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "Docker",
+        "level": "Intermediate",
+        "yearsOfExperience": 1
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Twiga Foods",
+        "role": "Junior Backend Engineer",
+        "startDate": "2024-01",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Maintain inventory REST APIs. Shipped 2 production features solo.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Strathmore University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2019,
+        "endYear": 2023
+      }
+    ],
+    "certifications": [],
+    "projects": [
+      {
+        "name": "farmer-pricing-api",
+        "description": "Personal side project — REST API suggesting fair produce prices using historical data.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "PostgreSQL"
+        ],
+        "role": "Solo",
+        "link": "",
+        "startDate": "2023-06",
+        "endDate": "2023-12"
+      }
+    ],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-05-15"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/grace-wanjiru",
+      "github": "https://github.com/grace-wanjiru",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Moses",
+    "lastName": "Okello",
+    "email": "moses.okello@example.com",
+    "headline": "Backend Engineer · Node.js · MongoDB",
+    "bio": "5 years Node.js but MongoDB-first. Postgres exposure is light.",
+    "location": "Kampala, Uganda",
+    "skills": [
+      {
+        "name": "Node.js",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "MongoDB",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "REST APIs",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Docker",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "SafeBoda",
+        "role": "Backend Engineer",
+        "startDate": "2020-04",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "REST services for ride-hailing platform. MongoDB-based data layer.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "MongoDB",
+          "Docker"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Makerere University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2014,
+        "endYear": 2018
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/moses-okello",
+      "github": "https://github.com/moses-okello",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Leila",
+    "lastName": "Hassan",
+    "email": "leila.hassan@example.com",
+    "headline": "DevOps Engineer → Transitioning to Backend",
+    "bio": "5 years DevOps (Docker, K8s). Learning Node.js + Postgres over the last year.",
+    "location": "Dar es Salaam, Tanzania",
+    "skills": [
+      {
+        "name": "Docker",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Kubernetes",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Node.js",
+        "level": "Intermediate",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "TypeScript",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "PostgreSQL",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "REST APIs",
+        "level": "Intermediate",
+        "yearsOfExperience": 1
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Vodacom Tanzania",
+        "role": "DevOps Engineer",
+        "startDate": "2019-09",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Own container platform for 40+ internal services. Recently helping build a new Node.js BFF.",
+        "technologies": [
+          "Docker",
+          "Kubernetes",
+          "Node.js",
+          "PostgreSQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Dar es Salaam",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Information Systems",
+        "startYear": 2014,
+        "endYear": 2018
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Certified Kubernetes Administrator",
+        "issuer": "CNCF",
+        "issueDate": "2022-03"
+      }
+    ],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-07-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/leila-hassan",
+      "github": "https://github.com/leila-hassan",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "David",
+    "lastName": "Mugisha",
+    "email": "david.mugisha@example.com",
+    "headline": ".NET Backend Developer",
+    "bio": "6 years C# and SQL Server. Never used Node.js or Postgres.",
+    "location": "Kigali, Rwanda",
+    "skills": [
+      {
+        "name": "C#",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": ".NET",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "SQL Server",
+        "level": "Advanced",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "REST APIs",
+        "level": "Advanced",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "Azure",
+        "level": "Intermediate",
+        "yearsOfExperience": 3
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Kinyarwanda",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Bank of Kigali",
+        "role": "Senior .NET Developer",
+        "startDate": "2018-05",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Core banking modules in C#/ASP.NET with SQL Server.",
+        "technologies": [
+          "C#",
+          ".NET",
+          "SQL Server"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Rwanda",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2013,
+        "endYear": 2017
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/david-mugisha",
+      "github": "",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Blessing",
+    "lastName": "Adebayo",
+    "email": "blessing.adebayo@example.com",
+    "headline": "PHP / Laravel Developer",
+    "bio": "5 years PHP/Laravel building small-business web apps. No Node.js.",
+    "location": "Ibadan, Nigeria",
+    "skills": [
+      {
+        "name": "PHP",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "Laravel",
+        "level": "Expert",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "MySQL",
+        "level": "Advanced",
+        "yearsOfExperience": 5
+      },
+      {
+        "name": "REST APIs",
+        "level": "Intermediate",
+        "yearsOfExperience": 3
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Yoruba",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Freelance",
+        "role": "PHP Developer",
+        "startDate": "2020-01",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Laravel e-commerce sites for local retailers.",
+        "technologies": [
+          "PHP",
+          "Laravel",
+          "MySQL"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Ibadan",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2015,
+        "endYear": 2019
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Available",
+      "type": "Contract",
+      "startDate": "2026-05-01"
+    },
+    "socialLinks": {
+      "linkedin": "",
+      "github": "https://github.com/blessing-adebayo",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Tunde",
+    "lastName": "Oyelaran",
+    "email": "tunde.oyelaran@example.com",
+    "headline": "Mobile Engineer · Flutter · iOS",
+    "bio": "Mobile specialist. Dart, Swift, Kotlin. No backend experience.",
+    "location": "Lagos, Nigeria",
+    "skills": [
+      {
+        "name": "Flutter",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Dart",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Swift",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "Kotlin",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Andela",
+        "role": "Senior Mobile Engineer",
+        "startDate": "2021-07",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Build Flutter apps for US healthcare clients.",
+        "technologies": [
+          "Flutter",
+          "Dart",
+          "Firebase"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Covenant University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2015,
+        "endYear": 2019
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/tunde-oyelaran",
+      "github": "https://github.com/tunde-oyelaran",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Esther",
+    "lastName": "Njoroge",
+    "email": "esther.njoroge@example.com",
+    "headline": "Data Analyst · SQL & Python",
+    "bio": "Analyst, not engineer. SQL reporting, Python scripting. No REST APIs shipped.",
+    "location": "Nairobi, Kenya",
+    "skills": [
+      {
+        "name": "SQL",
+        "level": "Expert",
+        "yearsOfExperience": 6
+      },
+      {
+        "name": "Python",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Tableau",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Safaricom",
+        "role": "Senior Data Analyst",
+        "startDate": "2019-02",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Dashboards and ad-hoc SQL analyses for the product team.",
+        "technologies": [
+          "SQL",
+          "Python",
+          "Tableau"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Nairobi",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Statistics",
+        "startYear": 2014,
+        "endYear": 2018
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-08-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/esther-njoroge",
+      "github": "",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "James",
+    "lastName": "Ochieng",
+    "email": "james.ochieng@example.com",
+    "headline": "Recent Graduate · Fresh Talent",
+    "bio": "Just graduated. Completed a bootcamp. No professional experience yet.",
+    "location": "Kisumu, Kenya",
+    "skills": [
+      {
+        "name": "JavaScript",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "Node.js",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      },
+      {
+        "name": "HTML",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "CSS",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [],
+    "education": [
+      {
+        "institution": "Maseno University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2020,
+        "endYear": 2024
+      }
+    ],
+    "certifications": [],
+    "projects": [
+      {
+        "name": "todo-api",
+        "description": "Bootcamp capstone — Express.js CRUD todo API.",
+        "technologies": [
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ],
+        "role": "Solo",
+        "link": "",
+        "startDate": "2024-06",
+        "endDate": "2024-08"
+      }
+    ],
+    "availability": {
+      "status": "Available",
+      "type": "Full-time",
+      "startDate": "2026-05-01"
+    },
+    "socialLinks": {
+      "linkedin": "",
+      "github": "https://github.com/james-ochieng",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Peace",
+    "lastName": "Mukasa",
+    "email": "peace.mukasa@example.com",
+    "headline": "QA / Manual Tester",
+    "bio": "Manual QA with basic Postman knowledge. Not a developer.",
+    "location": "Kampala, Uganda",
+    "skills": [
+      {
+        "name": "Manual Testing",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Postman",
+        "level": "Intermediate",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "SQL",
+        "level": "Beginner",
+        "yearsOfExperience": 2
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      }
+    ],
+    "experience": [
+      {
+        "company": "SafeBoda",
+        "role": "QA Engineer",
+        "startDate": "2020-09",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Manual regression testing. Write basic API smoke tests in Postman.",
+        "technologies": [
+          "Postman"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "Makerere University",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Information Technology",
+        "startYear": 2014,
+        "endYear": 2018
+      }
+    ],
+    "certifications": [
+      {
+        "name": "ISTQB Foundation Level",
+        "issuer": "ISTQB",
+        "issueDate": "2021-06"
+      }
+    ],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/peace-mukasa",
+      "github": "",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Adaeze",
+    "lastName": "Nwosu",
+    "email": "adaeze.nwosu@example.com",
+    "headline": "Frontend Developer · React · Next.js",
+    "bio": "4 years frontend only. React, Next.js, CSS. No backend work.",
+    "location": "Abuja, Nigeria",
+    "skills": [
+      {
+        "name": "React",
+        "level": "Expert",
+        "yearsOfExperience": 4
+      },
+      {
+        "name": "Next.js",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "TypeScript",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "CSS",
+        "level": "Advanced",
+        "yearsOfExperience": 4
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Native"
+      },
+      {
+        "name": "Igbo",
+        "proficiency": "Conversational"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Flutterwave",
+        "role": "Frontend Engineer",
+        "startDate": "2021-10",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Ship React dashboards for merchant analytics. Consume REST APIs, do not write them.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of Nigeria Nsukka",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2015,
+        "endYear": 2019
+      }
+    ],
+    "certifications": [],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-06-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/adaeze-nwosu",
+      "github": "https://github.com/adaeze-nwosu",
+      "portfolio": ""
+    }
+  },
+  {
+    "firstName": "Brian",
+    "lastName": "Mutua",
+    "email": "brian.mutua@example.com",
+    "headline": "Technical Project Manager",
+    "bio": "Former developer, now PM for 3 years. Stopped coding regularly in 2022.",
+    "location": "Nairobi, Kenya",
+    "skills": [
+      {
+        "name": "Project Management",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "Agile",
+        "level": "Advanced",
+        "yearsOfExperience": 3
+      },
+      {
+        "name": "JavaScript",
+        "level": "Intermediate",
+        "yearsOfExperience": 2
+      },
+      {
+        "name": "Node.js",
+        "level": "Beginner",
+        "yearsOfExperience": 1
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "proficiency": "Fluent"
+      },
+      {
+        "name": "Swahili",
+        "proficiency": "Native"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Andela",
+        "role": "Technical Project Manager",
+        "startDate": "2022-01",
+        "endDate": "Present",
+        "isCurrent": true,
+        "description": "Coordinate engineering teams for US enterprise clients. No hands-on coding.",
+        "technologies": []
+      },
+      {
+        "company": "Andela",
+        "role": "Software Engineer",
+        "startDate": "2020-01",
+        "endDate": "2021-12",
+        "isCurrent": false,
+        "description": "Frontend development on client projects. Some Node.js exposure.",
+        "technologies": [
+          "React",
+          "Node.js"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "institution": "JKUAT",
+        "degree": "B.Sc.",
+        "fieldOfStudy": "Computer Science",
+        "startYear": 2014,
+        "endYear": 2018
+      }
+    ],
+    "certifications": [
+      {
+        "name": "PMP",
+        "issuer": "PMI",
+        "issueDate": "2023-04"
+      }
+    ],
+    "projects": [],
+    "availability": {
+      "status": "Open to Opportunities",
+      "type": "Full-time",
+      "startDate": "2026-07-01"
+    },
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/brian-mutua",
+      "github": "",
+      "portfolio": ""
+    }
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "firstName": "Brian",
+  "lastName": "Mutua",
+  "email": "brian.mutua@example.com",
+  "headline": "Technical Project Manager",
+  "bio": "Former developer, now PM for 3 years. Stopped coding regularly in 2022.",
+  "location": "Nairobi, Kenya",
+  "skills": [
+    { "name": "Project Management", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "Agile", "level": "Advanced", "yearsOfExperience": 3 },
+    { "name": "JavaScript", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "Node.js", "level": "Beginner", "yearsOfExperience": 1 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Swahili", "proficiency": "Native" }
+  ],
+  "experience": [
+    {
+      "company": "Andela",
+      "role": "Technical Project Manager",
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Coordinate engineering teams for US enterprise clients. No hands-on coding.",
+      "technologies": []
+    },
+    {
+      "company": "Andela",
+      "role": "Software Engineer",
+      "startDate": "2020-01",
+      "endDate": "2021-12",
+      "isCurrent": false,
+      "description": "Frontend development on client projects. Some Node.js exposure.",
+      "technologies": ["React", "Node.js"]
+    }
+  ],
+  "education": [
+    { "institution": "JKUAT", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2014, "endYear": 2018 }
+  ],
+  "certifications": [
+    { "name": "PMP", "issuer": "PMI", "issueDate": "2023-04" }
+  ],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-07-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/brian-mutua", "github": "", "portfolio": "" }
+}

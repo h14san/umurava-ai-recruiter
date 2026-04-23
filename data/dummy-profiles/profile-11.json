@@ -1,0 +1,37 @@
+{
+  "firstName": "Moses",
+  "lastName": "Okello",
+  "email": "moses.okello@example.com",
+  "headline": "Backend Engineer · Node.js · MongoDB",
+  "bio": "5 years Node.js but MongoDB-first. Postgres exposure is light.",
+  "location": "Kampala, Uganda",
+  "skills": [
+    { "name": "Node.js", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "MongoDB", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "PostgreSQL", "level": "Beginner", "yearsOfExperience": 1 },
+    { "name": "REST APIs", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "Docker", "level": "Advanced", "yearsOfExperience": 3 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" }
+  ],
+  "experience": [
+    {
+      "company": "SafeBoda",
+      "role": "Backend Engineer",
+      "startDate": "2020-04",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "REST services for ride-hailing platform. MongoDB-based data layer.",
+      "technologies": ["Node.js", "TypeScript", "MongoDB", "Docker"]
+    }
+  ],
+  "education": [
+    { "institution": "Makerere University", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2014, "endYear": 2018 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/moses-okello", "github": "https://github.com/moses-okello", "portfolio": "" }
+}

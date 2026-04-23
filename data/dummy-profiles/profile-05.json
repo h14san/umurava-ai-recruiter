@@ -1,0 +1,64 @@
+{
+  "firstName": "Tendai",
+  "lastName": "Moyo",
+  "email": "tendai.moyo@example.com",
+  "headline": "Senior Software Engineer · Distributed APIs",
+  "bio": "6 years shipping production Node.js backends. Deep Postgres + Docker experience.",
+  "location": "Kampala, Uganda",
+  "skills": [
+    { "name": "Node.js", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "PostgreSQL", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "REST APIs", "level": "Expert", "yearsOfExperience": 6 },
+    { "name": "Docker", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "AWS", "level": "Advanced", "yearsOfExperience": 4 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" }
+  ],
+  "experience": [
+    {
+      "company": "Ericsson Africa",
+      "role": "Senior Engineer",
+      "startDate": "2020-04",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Build telco OSS/BSS REST APIs. Owner of Postgres schema serving 20+ internal services.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker", "AWS"]
+    },
+    {
+      "company": "Safaricom",
+      "role": "Backend Engineer",
+      "startDate": "2018-01",
+      "endDate": "2020-03",
+      "isCurrent": false,
+      "description": "M-Pesa merchant-onboarding REST service.",
+      "technologies": ["Node.js", "PostgreSQL"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Makerere University",
+      "degree": "B.Sc.",
+      "fieldOfStudy": "Computer Science",
+      "startYear": 2013,
+      "endYear": 2017
+    }
+  ],
+  "certifications": [
+    { "name": "AWS Certified Developer - Associate", "issuer": "AWS", "issueDate": "2022-08" }
+  ],
+  "projects": [
+    {
+      "name": "oss-bss-gateway",
+      "description": "Gateway microservice unifying 12 telco backends behind one REST API.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"],
+      "role": "Tech Lead",
+      "link": "",
+      "startDate": "2022-06",
+      "endDate": "2023-08"
+    }
+  ],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-15" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/tendai-moyo", "github": "https://github.com/tendai-moyo", "portfolio": "" }
+}

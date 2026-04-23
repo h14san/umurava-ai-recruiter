@@ -1,0 +1,38 @@
+{
+  "firstName": "Nneka",
+  "lastName": "Eze",
+  "email": "nneka.eze@example.com",
+  "headline": "Full-Stack Engineer · React + Node",
+  "bio": "4 years full-stack. 60% frontend, 40% backend. Knows Postgres but mostly uses ORMs.",
+  "location": "Lagos, Nigeria",
+  "skills": [
+    { "name": "Node.js", "level": "Intermediate", "yearsOfExperience": 3 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "PostgreSQL", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "REST APIs", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "Docker", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "React", "level": "Expert", "yearsOfExperience": 4 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Native" },
+    { "name": "Igbo", "proficiency": "Fluent" }
+  ],
+  "experience": [
+    {
+      "company": "Paystack",
+      "role": "Full-Stack Engineer",
+      "startDate": "2021-06",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Split time between dashboard UI and supporting Node services.",
+      "technologies": ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"]
+    }
+  ],
+  "education": [
+    { "institution": "Covenant University", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2015, "endYear": 2019 }
+  ],
+  "certifications": [],
+  "projects": [],
+  "availability": { "status": "Open to Opportunities", "type": "Full-time", "startDate": "2026-06-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/nneka-eze", "github": "https://github.com/nneka-eze", "portfolio": "" }
+}

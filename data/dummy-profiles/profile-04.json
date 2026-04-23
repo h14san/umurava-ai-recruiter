@@ -1,0 +1,64 @@
+{
+  "firstName": "Aisha",
+  "lastName": "Nkurunziza",
+  "email": "aisha.nkurunziza@example.com",
+  "headline": "Senior Backend Engineer · Rwanda",
+  "bio": "5 years building Node.js + Postgres services. Currently at Andela Rwanda.",
+  "location": "Kigali, Rwanda",
+  "skills": [
+    { "name": "Node.js", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "TypeScript", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "PostgreSQL", "level": "Advanced", "yearsOfExperience": 5 },
+    { "name": "REST APIs", "level": "Expert", "yearsOfExperience": 5 },
+    { "name": "Docker", "level": "Advanced", "yearsOfExperience": 4 },
+    { "name": "GraphQL", "level": "Intermediate", "yearsOfExperience": 2 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Kinyarwanda", "proficiency": "Native" },
+    { "name": "French", "proficiency": "Conversational" }
+  ],
+  "experience": [
+    {
+      "company": "Andela",
+      "role": "Senior Backend Engineer",
+      "startDate": "2021-09",
+      "endDate": "Present",
+      "isCurrent": true,
+      "description": "Lead a 4-engineer pod building Postgres-backed REST APIs for enterprise clients.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"]
+    },
+    {
+      "company": "Bank of Kigali",
+      "role": "Backend Engineer",
+      "startDate": "2019-03",
+      "endDate": "2021-08",
+      "isCurrent": false,
+      "description": "Core-banking integrations — payment reconciliation and nightly batch jobs.",
+      "technologies": ["Node.js", "PostgreSQL", "Docker"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Rwanda",
+      "degree": "B.Sc.",
+      "fieldOfStudy": "Software Engineering",
+      "startYear": 2014,
+      "endYear": 2018
+    }
+  ],
+  "certifications": [],
+  "projects": [
+    {
+      "name": "rwanda-tax-api",
+      "description": "Open-source REST API wrapper around the Rwanda Revenue Authority taxpayer verification endpoint.",
+      "technologies": ["Node.js", "TypeScript", "PostgreSQL", "Docker"],
+      "role": "Creator",
+      "link": "",
+      "startDate": "2023-06",
+      "endDate": "2023-11"
+    }
+  ],
+  "availability": { "status": "Available", "type": "Full-time", "startDate": "2026-05-01" },
+  "socialLinks": { "linkedin": "https://linkedin.com/in/aisha-nkurunziza", "github": "https://github.com/aisha-nkurunziza", "portfolio": "" }
+}

@@ -1,0 +1,36 @@
+{
+  "firstName": "James",
+  "lastName": "Ochieng",
+  "email": "james.ochieng@example.com",
+  "headline": "Recent Graduate · Fresh Talent",
+  "bio": "Just graduated. Completed a bootcamp. No professional experience yet.",
+  "location": "Kisumu, Kenya",
+  "skills": [
+    { "name": "JavaScript", "level": "Beginner", "yearsOfExperience": 1 },
+    { "name": "Node.js", "level": "Beginner", "yearsOfExperience": 1 },
+    { "name": "HTML", "level": "Intermediate", "yearsOfExperience": 2 },
+    { "name": "CSS", "level": "Intermediate", "yearsOfExperience": 2 }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Fluent" },
+    { "name": "Swahili", "proficiency": "Native" }
+  ],
+  "experience": [],
+  "education": [
+    { "institution": "Maseno University", "degree": "B.Sc.", "fieldOfStudy": "Computer Science", "startYear": 2020, "endYear": 2024 }
+  ],
+  "certifications": [],
+  "projects": [
+    {
+      "name": "todo-api",
+      "description": "Bootcamp capstone — Express.js CRUD todo API.",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "role": "Solo",
+      "link": "",
+      "startDate": "2024-06",
+      "endDate": "2024-08"
+    }
+  ],
+  "availability": { "status": "Available", "type": "Full-time", "startDate": "2026-05-01" },
+  "socialLinks": { "linkedin": "", "github": "https://github.com/james-ochieng", "portfolio": "" }
+}
