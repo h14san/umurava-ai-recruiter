@@ -99,10 +99,18 @@ export interface JobInput {
   location: string;
 }
 
+export interface AISubScores {
+  skills: number;
+  experience: number;
+  education: number;
+  projects: number;
+}
+
 export interface AIScreeningResult {
   candidateId: string;
   rank: number;
   matchScore: number;
+  subScores: AISubScores;
   strengths: string[];
   gaps: string[];
   recommendation: string;

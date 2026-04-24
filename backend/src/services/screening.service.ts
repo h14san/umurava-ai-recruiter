@@ -41,6 +41,7 @@ export async function runScreening({ jobId, recruiterId, shortlistSize }: RunScr
         externalId: applicant.externalId,
         rank: r.rank,
         matchScore: r.matchScore,
+        subScores: r.subScores,
         strengths: r.strengths,
         gaps: r.gaps,
         recommendation: r.recommendation,

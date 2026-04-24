@@ -26,7 +26,7 @@ export const AVAILABILITY_STATUSES = [
 export const AVAILABILITY_TYPES = ["Full-time", "Part-time", "Contract"] as const;
 
 export const GEMINI_MODEL = "gemini-2.5-flash" as const;
-export const PROMPT_VERSION = "v1" as const;
+export const PROMPT_VERSION = "v2" as const;
 
 export const JWT_EXPIRES_IN = "7d" as const;
 export const BCRYPT_ROUNDS = 10;

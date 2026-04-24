@@ -1,11 +1,19 @@
 import { Schema, model, Document, Types } from "mongoose";
 import { GEMINI_MODEL, PROMPT_VERSION, SHORTLIST_SIZES, type ShortlistSize } from "../constants";
 
+export interface ScreeningSubScores {
+  skills: number;
+  experience: number;
+  education: number;
+  projects: number;
+}
+
 export interface ScreeningCandidateResult {
   candidateId: Types.ObjectId;
   externalId: string;
   rank: number;
   matchScore: number;
+  subScores: ScreeningSubScores;
   strengths: string[];
   gaps: string[];
   recommendation: string;
@@ -32,6 +40,12 @@ const CandidateResultSchema = new Schema<ScreeningCandidateResult>(
     externalId: { type: String, required: true },
     rank: { type: Number, required: true, min: 1 },
     matchScore: { type: Number, required: true, min: 0, max: 100 },
+    subScores: {
+      skills: { type: Number, required: true, min: 0, max: 100 },
+      experience: { type: Number, required: true, min: 0, max: 100 },
+      education: { type: Number, required: true, min: 0, max: 100 },
+      projects: { type: Number, required: true, min: 0, max: 100 },
+    },
     strengths: { type: [String], default: [] },
     gaps: { type: [String], default: [] },
     recommendation: { type: String, required: true },

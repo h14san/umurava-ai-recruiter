@@ -51,7 +51,7 @@ Neither app has a test runner configured. Do not add mock test commands to packa
 1. Verify the job belongs to the authed recruiter (`req.user.id`).
 2. Load all `Applicant` docs for the job.
 3. Call `screenCandidates()` in `gemini.service.ts`, which:
-   - Builds a JSON payload of the job + candidates and concatenates it onto `SCREENING_PROMPT_V1`.
+   - Builds a JSON payload of the job + candidates and concatenates it onto `SCREENING_PROMPT_V2`.
    - Calls Gemini with `responseMimeType: "application/json"` and `temperature: 0.2`.
    - Parses with Zod (`ResultsArraySchema`). On parse failure, **retries once** with a stricter "JSON only" reminder appended. A second failure throws `GeminiParseError` (502).
 4. Map Gemini's `candidateId` (which is the applicant's `externalId`) back to Mongo `_id`. Unknown ids are dropped with a warning — do not throw.
@@ -61,7 +61,7 @@ Neither app has a test runner configured. Do not add mock test commands to packa
 ### Scoring weights are load-bearing
 `backend/src/constants/index.ts` defines `SCORING_WEIGHTS` (skills 40 / experience 25 / education 15 / projects 20). These are **hackathon-mandated** and are interpolated into the prompt so judging criteria stay aligned with Gemini's output. Don't change them casually.
 
-Also pinned there: `GEMINI_MODEL = "gemini-1.5-flash"` and `PROMPT_VERSION = "v1"`. Both are stored on each `ScreeningResult` so past runs remain attributable if the model/prompt changes.
+Also pinned there: `GEMINI_MODEL` and `PROMPT_VERSION` (currently `v2`). Both are stored on each `ScreeningResult` so past runs remain attributable if the model/prompt changes.
 
 ### Route layout
 All routes except `/api/auth/login` require `requireAuth` (Bearer JWT). Applicant and screening routes are nested under `/api/jobs/:id/*` but mounted as separate routers in `backend/src/index.ts`:

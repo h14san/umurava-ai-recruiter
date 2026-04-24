@@ -7,10 +7,12 @@ import type { JobDocument } from "../models/Job.model";
 import type { AIScreeningResult, ShortlistSize } from "../types";
 
 /**
- * v1 prompt. Weights are mandated by the hackathon brief and are explicit
+ * v2 prompt. Weights are mandated by the hackathon brief and are explicit
  * in the prompt so the model's scoring stays aligned with judging criteria.
+ * v2 adds an explicit fairness clause (rule 10) — bump PROMPT_VERSION
+ * in constants whenever this prompt changes so past results stay attributable.
  */
-export const SCREENING_PROMPT_V1 = `You are an expert technical recruiter screening candidates for a specific job posting.
+export const SCREENING_PROMPT_V2 = `You are an expert technical recruiter screening candidates for a specific job posting.
 
 Scoring weights (use these EXACT weights when computing matchScore 0-100):
 - Skills match: ${SCORING_WEIGHTS.skills}%
@@ -19,14 +21,17 @@ Scoring weights (use these EXACT weights when computing matchScore 0-100):
 - Projects (complexity, relevance to required skills): ${SCORING_WEIGHTS.projects}%
 
 Rules for each candidate:
-1. matchScore must be an integer 0-100 computed from the weights above.
-2. strengths: up to 3 SPECIFIC, EVIDENCE-BASED points. Include numeric evidence wherever possible (e.g. "6 years of Node.js, exceeds the 4-year requirement"). Avoid generic statements like "strong candidate".
-3. gaps: up to 3 specific missing/weak areas vs. the job (e.g. "No Docker experience listed", "Postgres only mentioned at Intermediate level").
-4. recommendation: 1-2 sentences, specific and actionable (e.g. "Recommend for interview — deepest Postgres experience in the pool. Probe Docker production usage.").
-5. skillMatchBreakdown.matched: required skills the candidate clearly has.
-6. skillMatchBreakdown.missing: required skills the candidate does not have or cannot be verified.
-7. rank: 1 = best fit. Ranks must be unique and consecutive starting at 1.
-8. candidateId: echo back the exact externalId value provided for that candidate.
+1. subScores: integers 0-100 for EACH of skills, experience, education, projects. Score each dimension independently against the job.
+2. matchScore: integer 0-100 computed as the weighted average of subScores using the EXACT weights above:
+   matchScore = round(skills*0.40 + experience*0.25 + education*0.15 + projects*0.20).
+3. strengths: up to 3 SPECIFIC, EVIDENCE-BASED points. Include numeric evidence wherever possible (e.g. "6 years of Node.js, exceeds the 4-year requirement"). Avoid generic statements like "strong candidate".
+4. gaps: up to 3 specific missing/weak areas vs. the job (e.g. "No Docker experience listed", "Postgres only mentioned at Intermediate level").
+5. recommendation: 1-2 sentences, specific and actionable (e.g. "Recommend for interview — deepest Postgres experience in the pool. Probe Docker production usage.").
+6. skillMatchBreakdown.matched: required skills the candidate clearly has.
+7. skillMatchBreakdown.missing: required skills the candidate does not have or cannot be verified.
+8. rank: 1 = best fit. Ranks must be unique and consecutive starting at 1.
+9. candidateId: echo back the exact externalId value provided for that candidate.
+10. Fairness: Score candidates ONLY on job-relevant evidence present in their profile (skills, experience, education, projects). Do NOT infer or weight protected characteristics — gender, age, ethnicity, nationality, religion — even if inferable from names, photos, or locations. When evidence for a dimension is missing, list it in gaps rather than penalizing based on assumptions. Use neutral, evidence-based language in strengths, gaps, and recommendation.
 
 Return ONLY a valid JSON array, no markdown fences, no commentary, no prefix/suffix text.
 Each item must match this schema exactly:
@@ -34,16 +39,25 @@ Each item must match this schema exactly:
   "candidateId": string,
   "rank": number,
   "matchScore": number,
+  "subScores": { "skills": number, "experience": number, "education": number, "projects": number },
   "strengths": string[],
   "gaps": string[],
   "recommendation": string,
   "skillMatchBreakdown": { "matched": string[], "missing": string[] }
 }`;
 
+const SubScoresSchema = z.object({
+  skills: z.number().min(0).max(100),
+  experience: z.number().min(0).max(100),
+  education: z.number().min(0).max(100),
+  projects: z.number().min(0).max(100),
+});
+
 const ResultItemSchema = z.object({
   candidateId: z.string(),
   rank: z.number().int().min(1),
   matchScore: z.number().min(0).max(100),
+  subScores: SubScoresSchema,
   strengths: z.array(z.string()).max(3),
   gaps: z.array(z.string()).max(3),
   recommendation: z.string().min(1),
@@ -122,7 +136,7 @@ export async function screenCandidates(
   input: ScreenCandidatesInput
 ): Promise<AIScreeningResult[]> {
   const userPayload = buildUserPayload(input);
-  const firstPrompt = `${SCREENING_PROMPT_V1}\n\nInput:\n${userPayload}`;
+  const firstPrompt = `${SCREENING_PROMPT_V2}\n\nInput:\n${userPayload}`;
 
   let raw: string;
   try {

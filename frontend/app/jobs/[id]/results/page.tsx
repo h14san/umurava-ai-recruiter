@@ -3,14 +3,19 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import toast from "react-hot-toast";
 import {
   Briefcase,
   CheckCircle2,
   ChevronDown,
+  Copy,
+  Download,
   ExternalLink,
   Globe,
   GraduationCap,
+  LayoutGrid,
   Linkedin,
+  List,
   Medal,
   Sparkles,
   XCircle,
@@ -24,7 +29,16 @@ import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ScoreBar } from "@/components/ui/ScoreBar";
 import { StarRating } from "@/components/ui/StarRating";
 import { DISCLAIMER } from "@/constants";
-import { cn, fullName, scoreLabel, scoreTier } from "@/lib/utils";
+import {
+  cn,
+  downloadCsv,
+  fullName,
+  rowsToCsv,
+  scoreLabel,
+  scoreTier,
+  slugify,
+  type CsvRow,
+} from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { fetchApplicants } from "@/store/slices/applicantsSlice";
 import { fetchJob } from "@/store/slices/jobsSlice";
@@ -33,6 +47,15 @@ import type { Applicant, ScreeningCandidateResult } from "@/types";
 
 type Filter = "all" | "strong" | "partial" | "weak";
 type Sort = "rank" | "score" | "name";
+type View = "cards" | "table";
+
+const WEIGHTS = { skills: 40, experience: 25, education: 15, projects: 20 } as const;
+const SUB_SCORE_FIELDS: Array<{ key: keyof typeof WEIGHTS; label: string }> = [
+  { key: "skills", label: "Skills" },
+  { key: "experience", label: "Experience" },
+  { key: "education", label: "Education" },
+  { key: "projects", label: "Projects" },
+];
 
 const filterItems: Array<{ key: Filter; label: string }> = [
   { key: "all", label: "All" },
@@ -48,6 +71,7 @@ export default function ResultsPage() {
 
   const [filter, setFilter] = useState<Filter>("all");
   const [sort, setSort] = useState<Sort>("rank");
+  const [view, setView] = useState<View>("cards");
 
   const job = useAppSelector((state) =>
     state.jobs.current && state.jobs.current._id === jobId ? state.jobs.current : null
@@ -84,6 +108,32 @@ export default function ResultsPage() {
     });
   }, [applicants, filter, result, sort]);
 
+  const handleExportCsv = () => {
+    if (!result || filteredResults.length === 0) return;
+    const rows: CsvRow[] = filteredResults.map((entry) => {
+      const applicant = resolveApplicant(entry, applicants);
+      return {
+        rank: entry.rank,
+        name: candidateName(entry, applicants),
+        email: applicant?.email ?? "",
+        matchScore: entry.matchScore,
+        skills: entry.subScores?.skills ?? 0,
+        experience: entry.subScores?.experience ?? 0,
+        education: entry.subScores?.education ?? 0,
+        projects: entry.subScores?.projects ?? 0,
+        matched: entry.skillMatchBreakdown.matched.join("; "),
+        missing: entry.skillMatchBreakdown.missing.join("; "),
+        strengths: entry.strengths.join("; "),
+        gaps: entry.gaps.join("; "),
+        recommendation: entry.recommendation,
+      };
+    });
+    const csv = rowsToCsv(rows);
+    const filename = `${slugify(job?.title ?? "shortlist")}-shortlist.csv`;
+    downloadCsv(filename, csv);
+    toast.success(`Exported ${rows.length} candidates`);
+  };
+
   const metrics = useMemo(() => {
     if (!result || result.results.length === 0) return null;
     const scores = result.results.map((item) => item.matchScore);
@@ -103,10 +153,32 @@ export default function ResultsPage() {
         <div className="mt-3 flex flex-wrap items-end justify-between gap-3">
           <div>
             <h1 className="text-[22px]">{job?.title ?? "Screening Results"}</h1>
+            {result && (
+              <div className="mt-1 text-sm text-muted">
+                Screened {new Date(result.createdAt).toLocaleDateString()} · {result.results.length} candidates
+              </div>
+            )}
           </div>
-          {result && (
-            <div className="text-sm text-muted">
-              Screened {new Date(result.createdAt).toLocaleDateString()}
+          {result && result.results.length > 0 && (
+            <div className="flex items-center gap-2">
+              <div className="inline-flex rounded-[999px] border border-app p-1">
+                <ViewToggleButton
+                  active={view === "cards"}
+                  onClick={() => setView("cards")}
+                  icon={LayoutGrid}
+                  label="Cards"
+                />
+                <ViewToggleButton
+                  active={view === "table"}
+                  onClick={() => setView("table")}
+                  icon={List}
+                  label="Table"
+                />
+              </div>
+              <Button variant="outlined" size="sm" onClick={handleExportCsv}>
+                <Download size={14} />
+                Export CSV
+              </Button>
             </div>
           )}
         </div>
@@ -185,21 +257,25 @@ export default function ResultsPage() {
             </select>
           </div>
 
-          <div className="space-y-4 pb-20">
-            {filteredResults.map((entry) => (
-              <ResultCard
-                key={entry.externalId}
-                entry={entry}
-                applicant={resolveApplicant(entry, applicants)}
-              />
-            ))}
-          </div>
-
-          <div className="sticky bottom-0 mt-auto border-t border-app bg-app px-4 py-3 text-center text-xs italic text-muted md:px-0">
-            {DISCLAIMER}
-          </div>
+          {view === "cards" ? (
+            <div className="space-y-4 pb-20">
+              {filteredResults.map((entry) => (
+                <ResultCard
+                  key={entry.externalId}
+                  entry={entry}
+                  applicant={resolveApplicant(entry, applicants)}
+                />
+              ))}
+            </div>
+          ) : (
+            <ResultsTable entries={filteredResults} applicants={applicants} />
+          )}
         </>
       )}
+
+      <div className="sticky bottom-0 mt-auto border-t border-app bg-app px-4 py-3 text-center text-xs italic text-muted md:px-0">
+        {DISCLAIMER}
+      </div>
     </div>
   );
 }
@@ -286,6 +362,13 @@ function ResultCard({
 
         <div className="mt-4">
           <ScoreBar score={entry.matchScore} />
+        </div>
+
+        <div className="mt-4">
+          <div className="mb-2 text-[11px] font-medium uppercase tracking-[0.18em] text-muted">
+            Score breakdown
+          </div>
+          <SubScoreGrid subScores={entry.subScores} />
         </div>
 
         <div className="mt-4">
@@ -407,7 +490,7 @@ function ResultCard({
           </div>
         </div>
 
-        <div className="mt-5 flex items-center justify-between">
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
           <button
             type="button"
             onClick={() => setShowProfile((value) => !value)}
@@ -415,14 +498,25 @@ function ResultCard({
           >
             View full profile
           </button>
-          <button
-            type="button"
-            onClick={() => setShowWhy((value) => !value)}
-            className="inline-flex items-center gap-1 text-sm text-[var(--accent)]"
-          >
-            Why this score?
-            <ChevronDown size={14} className={showWhy ? "rotate-180 transition" : "transition"} />
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              type="button"
+              onClick={() => copyCandidateSummary(entry, applicant)}
+              className="inline-flex items-center gap-1 text-sm text-muted hover:text-[var(--accent)]"
+              aria-label="Copy candidate summary"
+            >
+              <Copy size={14} />
+              Copy summary
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowWhy((value) => !value)}
+              className="inline-flex items-center gap-1 text-sm text-[var(--accent)]"
+            >
+              Why this score?
+              <ChevronDown size={14} className={showWhy ? "rotate-180 transition" : "transition"} />
+            </button>
+          </div>
         </div>
       </div>
     </article>
@@ -512,4 +606,168 @@ function candidateName(entry: ScreeningCandidateResult, applicants: Applicant[])
   if (applicant) return fullName(applicant.firstName, applicant.lastName);
   if (typeof entry.candidateId === "string") return "Candidate";
   return fullName(entry.candidateId.firstName, entry.candidateId.lastName);
+}
+
+function ViewToggleButton({
+  active,
+  onClick,
+  icon: Icon,
+  label,
+}: {
+  active: boolean;
+  onClick: () => void;
+  icon: typeof LayoutGrid;
+  label: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      aria-label={`${label} view`}
+      className={cn(
+        "inline-flex items-center gap-1.5 rounded-[999px] px-3 py-1.5 text-xs font-medium transition",
+        active ? "bg-[var(--accent)] text-white" : "text-muted hover:text-primary"
+      )}
+    >
+      <Icon size={13} />
+      {label}
+    </button>
+  );
+}
+
+function SubScoreGrid({ subScores }: { subScores: ScreeningCandidateResult["subScores"] }) {
+  if (!subScores) return null;
+  return (
+    <div className="grid grid-cols-2 gap-x-4 gap-y-2 md:grid-cols-4">
+      {SUB_SCORE_FIELDS.map((field) => {
+        const value = subScores[field.key] ?? 0;
+        return (
+          <div key={field.key}>
+            <div className="flex items-baseline justify-between">
+              <span className="text-[11px] font-medium text-muted">
+                {field.label}{" "}
+                <span className="text-[10px] text-muted/70">{WEIGHTS[field.key]}%</span>
+              </span>
+              <span className="text-xs font-semibold text-primary">{value}</span>
+            </div>
+            <div className="mt-1">
+              <ScoreBar score={value} />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function copyCandidateSummary(entry: ScreeningCandidateResult, applicant: Applicant | null) {
+  const name = applicant
+    ? fullName(applicant.firstName, applicant.lastName)
+    : typeof entry.candidateId !== "string"
+      ? fullName(entry.candidateId.firstName, entry.candidateId.lastName)
+      : "Candidate";
+  const sub = entry.subScores;
+  const lines = [
+    `#${entry.rank} ${name} — ${entry.matchScore}/100 (${scoreLabel(entry.matchScore)})`,
+    sub
+      ? `Skills ${sub.skills} · Experience ${sub.experience} · Education ${sub.education} · Projects ${sub.projects}`
+      : null,
+    applicant?.email ? `Email: ${applicant.email}` : null,
+    "",
+    "Strengths:",
+    ...entry.strengths.map((s) => `  - ${s}`),
+    "",
+    "Gaps:",
+    ...entry.gaps.map((g) => `  - ${g}`),
+    "",
+    `Recommendation: ${entry.recommendation}`,
+  ].filter(Boolean) as string[];
+  const text = lines.join("\n");
+
+  if (typeof navigator === "undefined" || !navigator.clipboard) {
+    toast.error("Clipboard not available");
+    return;
+  }
+  navigator.clipboard.writeText(text).then(
+    () => toast.success("Summary copied"),
+    () => toast.error("Failed to copy")
+  );
+}
+
+function ResultsTable({
+  entries,
+  applicants,
+}: {
+  entries: ScreeningCandidateResult[];
+  applicants: Applicant[];
+}) {
+  return (
+    <div className="overflow-x-auto rounded-[12px] border border-app bg-surface pb-20">
+      <table className="w-full min-w-[820px] text-sm">
+        <thead>
+          <tr className="border-b border-app text-left text-[11px] uppercase tracking-[0.18em] text-muted">
+            <th className="px-4 py-3 font-medium">Rank</th>
+            <th className="px-4 py-3 font-medium">Candidate</th>
+            <th className="px-4 py-3 font-medium">Match</th>
+            <th className="px-4 py-3 font-medium">Skills</th>
+            <th className="px-4 py-3 font-medium">Exp</th>
+            <th className="px-4 py-3 font-medium">Edu</th>
+            <th className="px-4 py-3 font-medium">Projects</th>
+            <th className="px-4 py-3 font-medium">Recommendation</th>
+            <th className="px-4 py-3 font-medium" aria-label="Actions" />
+          </tr>
+        </thead>
+        <tbody>
+          {entries.map((entry) => {
+            const applicant = resolveApplicant(entry, applicants);
+            const name = candidateName(entry, applicants);
+            const headline =
+              applicant?.headline ??
+              (typeof entry.candidateId !== "string" ? entry.candidateId.headline : "");
+            const tier = scoreTier(entry.matchScore);
+            const tierClass =
+              tier === "strong"
+                ? "text-[var(--success)]"
+                : tier === "partial"
+                  ? "text-[var(--warning)]"
+                  : "text-[var(--danger)]";
+            return (
+              <tr key={entry.externalId} className="border-b border-app last:border-b-0 align-top">
+                <td className="px-4 py-3 font-semibold text-primary">{entry.rank}</td>
+                <td className="px-4 py-3">
+                  <div className="font-medium text-primary">{name}</div>
+                  {headline && <div className="text-xs text-muted">{headline}</div>}
+                </td>
+                <td className="px-4 py-3">
+                  <div className={cn("text-base font-semibold", tierClass)}>
+                    {entry.matchScore}
+                    <span className="ml-0.5 text-xs font-normal text-muted">/100</span>
+                  </div>
+                </td>
+                <td className="px-4 py-3 text-primary">{entry.subScores?.skills ?? "—"}</td>
+                <td className="px-4 py-3 text-primary">{entry.subScores?.experience ?? "—"}</td>
+                <td className="px-4 py-3 text-primary">{entry.subScores?.education ?? "—"}</td>
+                <td className="px-4 py-3 text-primary">{entry.subScores?.projects ?? "—"}</td>
+                <td className="px-4 py-3 text-muted">
+                  <div className="line-clamp-2 max-w-[320px]">{entry.recommendation}</div>
+                </td>
+                <td className="px-4 py-3">
+                  <button
+                    type="button"
+                    onClick={() => copyCandidateSummary(entry, applicant)}
+                    className="inline-flex items-center gap-1 text-xs text-muted hover:text-[var(--accent)]"
+                    aria-label="Copy candidate summary"
+                  >
+                    <Copy size={13} />
+                    Copy
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  );
 }

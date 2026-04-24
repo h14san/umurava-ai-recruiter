@@ -107,6 +107,13 @@ export interface Job {
   updatedAt: string;
 }
 
+export interface ScreeningSubScores {
+  skills: number;
+  experience: number;
+  education: number;
+  projects: number;
+}
+
 export interface ScreeningCandidateResult {
   candidateId:
     | string
@@ -124,6 +131,7 @@ export interface ScreeningCandidateResult {
   externalId: string;
   rank: number;
   matchScore: number;
+  subScores: ScreeningSubScores;
   strengths: string[];
   gaps: string[];
   recommendation: string;
