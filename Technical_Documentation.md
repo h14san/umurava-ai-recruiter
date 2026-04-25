@@ -14,7 +14,7 @@ The project follows a decoupled monorepo architecture designed for scalability a
 
 ### **B. Backend Layer (Node.js & TypeScript)**
 * **API Orchestration**: An Express-based server that manages job CRUD operations and applicant ingestion pipelines.
-* **AI Orchestration Logic**: The `screening.service.ts` prepares job and applicant data to be processed by the AI layer].
+* **AI Orchestration Logic**: The `screening.service.ts` prepares job and applicant data to be processed by the AI layer.
 
 ### **C. AI Layer (Gemini API - Mandatory)**
 * **Intelligent Screening**: Uses the **Gemini API** as the underlying LLM to perform multi-candidate evaluation against job requirements.
@@ -27,10 +27,10 @@ The project follows a decoupled monorepo architecture designed for scalability a
 | Component | Technology | Compliance Status |
 | :--- | :--- | :--- |
 | **Language** | TypeScript | ✅ Recommended |
-| **Frontend** | [cite_start]Next.js & Tailwind CSS | ✅ Recommended |
-| **Backend** | [cite_start]Node.js  | ✅ Recommended |
-| **AI / LLM** | [cite_start]**Gemini API** | ✅ **Mandatory** |
-| **Database** | [cite_start]MongoDB  | ✅ Recommended |
+| **Frontend** | Next.js & Tailwind CSS | ✅ Recommended |
+| **Backend** | Node.js  | ✅ Recommended |
+| **AI / LLM** | **Gemini API** | ✅ **Mandatory** |
+| **Database** | MongoDB  | ✅ Recommended |
 
 ## 4. AI Decision Flow & Explainability
 1. **Prompt Engineering**: Uses intentional, documented prompts to ensure recruiter-friendly and structured outputs.
@@ -44,3 +44,26 @@ The project follows a decoupled monorepo architecture designed for scalability a
   * `MONGODB_URI`: Connection to the database.
   * `GEMINI_API_KEY`: Authentication for AI services.
   * `JWT_SECRET`: Secure recruiter authentication.
+
+## 6. Local Development
+> For a live demo, the application is also accessible at [umurava-ai-recruiter-jet.vercel.app](https://umurava-ai-recruiter-jet.vercel.app).
+
+### Prerequisites
+- Node.js 18+
+- MongoDB Atlas URI
+- Gemini API key
+
+### Backend
+```
+cd backend
+npm install
+cp .env.example .env   # fill in MONGODB_URI, GEMINI_API_KEY, JWT_SECRET
+npm run dev
+```
+
+### Frontend
+```
+cd frontend
+npm install
+npm run dev
+```
