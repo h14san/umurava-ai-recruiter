@@ -49,7 +49,7 @@ export default function LoginPage() {
               {[
                 "Screen 20+ candidates in seconds",
                 "Explainable AI rankings",
-                "Built for African talent",
+                "Human-Led Decisions",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3 text-sm text-white/80">
                   <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#10B981]" />
