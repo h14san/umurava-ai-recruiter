@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Bell, Menu, Search } from "lucide-react";
+import { Bell, Menu, Search, UserCircle } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useAppSelector } from "@/store/hooks";
 import { initials } from "@/lib/utils";
@@ -54,7 +54,7 @@ export function Topbar({ onToggleSidebar }: Props) {
         </div>
       </div>
 
-      <div className="flex items-center gap-1.5">
+      {/* <div className="flex items-center gap-1.5">
         <ThemeToggle />
         <button
           className="inline-flex h-9 w-9 items-center justify-center rounded-[8px] text-muted transition hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"
@@ -68,6 +68,16 @@ export function Topbar({ onToggleSidebar }: Props) {
         >
           {userInitials}
         </div>
+      </div> */}
+      <div className="flex items-center gap-1.5">
+        <ThemeToggle />
+        <button
+          className="inline-flex h-9 w-9 items-center justify-center rounded-[8px] text-muted transition hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"
+          aria-label="Notifications"
+        >
+          <Bell size={18} />
+        </button>
+        <UserCircle size={32} className="text-[var(--accent)]" />
       </div>
     </header>
   );
