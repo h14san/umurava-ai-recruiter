@@ -269,7 +269,7 @@ function SnapshotCard({
 
   return (
     <div className="rounded-[12px] border border-app bg-[var(--surface-soft)] p-3">
-      <div className="text-[11px] uppercase tracking-[0.18em] text-muted">{label}</div>
+      <div className="text-[11px] uppercase tracking-[0.18em] text-muted leading-tight break-words">{label}</div>
       <div className={`mt-2 text-xl font-semibold ${toneClass}`}>{value}</div>
     </div>
   );

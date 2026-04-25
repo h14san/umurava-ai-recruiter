@@ -44,7 +44,7 @@ export function Sidebar({ mobileOpen = false, onCloseMobile }: SidebarProps) {
     <div className="flex h-full flex-col bg-surface">
       <div className="flex h-[52px] items-center justify-between border-b border-app px-4 lg:hidden">
         <span className="text-[22px] font-semibold tracking-[-0.03em] text-[#1D9E75]">
-          competence.
+          Candidate Ranking System
         </span>
         <button
           type="button"
@@ -143,7 +143,7 @@ export function Sidebar({ mobileOpen = false, onCloseMobile }: SidebarProps) {
           Sign out
         </button>
         <div className="flex items-center justify-between px-2">
-          <span className="text-[11px] text-muted">by Umurava</span>
+          <span className="text-[11px] text-muted">by Team. N</span>
           <ThemeToggle />
         </div>
       </div>
