@@ -67,3 +67,4 @@ cd frontend
 npm install
 npm run dev
 ```
+Then log in at http://localhost:3000/login with `recruiter@umurava.test` / `Umurava!2026`.
