@@ -77,7 +77,12 @@ export function Topbar({ onToggleSidebar }: Props) {
         >
           <Bell size={18} />
         </button>
-        <UserCircle size={32} className="text-[var(--accent)]" />
+        <button
+          className="inline-flex h-9 w-9 items-center justify-center rounded-[8px] text-muted transition hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"
+          aria-label="Profile"
+        >
+          <UserCircle size={18} />
+        </button>
       </div>
     </header>
   );
