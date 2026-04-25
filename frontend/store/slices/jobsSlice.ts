@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { listJobs, createJob as createJobApi, getJob, ApiError } from "@/lib/api";
+import { listJobs, createJob as createJobApi, getJob, deleteJob as deleteJobApi, ApiError } from "@/lib/api";
 import type { CreateJobInput, Job } from "@/types";
 
 interface JobsState {
@@ -53,6 +53,18 @@ export const createJob = createAsyncThunk<Job, CreateJobInput, { rejectValue: st
   }
 );
 
+export const deleteJob = createAsyncThunk<string, string, { rejectValue: string }>(
+  "jobs/delete",
+  async (id, { rejectWithValue }) => {
+    try {
+      await deleteJobApi(id);
+      return id;
+    } catch (err) {
+      return rejectWithValue(err instanceof ApiError ? err.message : "Could not delete job.");
+    }
+  }
+);
+
 const jobsSlice = createSlice({
   name: "jobs",
   initialState,
@@ -100,6 +112,11 @@ const jobsSlice = createSlice({
     b.addCase(createJob.rejected, (s, a) => {
       s.createStatus = "error";
       s.createError = a.payload ?? "Could not create job.";
+    });
+
+    b.addCase(deleteJob.fulfilled, (s, a) => {
+      s.list = s.list.filter((job) => job._id !== a.payload);
+      if (s.current?._id === a.payload) s.current = null;
     });
   },
 });

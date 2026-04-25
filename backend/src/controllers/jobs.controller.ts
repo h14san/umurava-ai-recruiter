@@ -46,3 +46,15 @@ export async function getJob(req: AuthedRequest, res: Response, next: NextFuncti
     next(err);
   }
 }
+export async function deleteJob(req: AuthedRequest, res: Response, next: NextFunction) {
+  try {
+    const { id } = req.params;
+    if (!Types.ObjectId.isValid(id)) throw new HttpError(400, "Invalid job id.");
+    const recruiterId = req.user!.userId;
+    const job = await JobModel.findOneAndDelete({ _id: id, recruiter: recruiterId });
+    if (!job) throw new HttpError(404, "Job not found.");
+    res.status(204).send();
+  } catch (err) {
+    next(err);
+  }
+}

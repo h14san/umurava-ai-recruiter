@@ -108,3 +108,7 @@ export async function runScreeningApi(
 export async function getResultsApi(jobId: string): Promise<ScreeningResult | null> {
   return apiFetch(`/api/jobs/${jobId}/results`);
 }
+
+export async function deleteJob(id: string): Promise<void> {
+  return apiFetch(`/api/jobs/${id}`, { method: "DELETE" });
+}

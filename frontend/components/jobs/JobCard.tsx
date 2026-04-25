@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ChevronRight, MapPin } from "lucide-react";
+import { MapPin, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
-import { useAppSelector } from "@/store/hooks";
+import { useAppSelector, useAppDispatch } from "@/store/hooks";
+import { deleteJob } from "@/store/slices/jobsSlice";
 import type { Job } from "@/types";
 
 function cardStatus(rawStatus: Job["status"]) {
@@ -15,11 +16,20 @@ function cardStatus(rawStatus: Job["status"]) {
 
 export function JobCard({ job }: { job: Job }) {
   const pathname = usePathname();
+  const dispatch = useAppDispatch();
   const applicantCount = useAppSelector((state) => state.applicants.byJobId[job._id]?.length ?? 0);
   const active = pathname === `/jobs/${job._id}`;
   const status = cardStatus(job.status);
   const visibleSkills = job.requiredSkills.slice(0, 3);
   const overflow = Math.max(0, job.requiredSkills.length - visibleSkills.length);
+
+  function handleDelete(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    const confirmed = window.confirm("Are you sure you want to delete this job? This action is irreversible.");
+    if (!confirmed) return;
+    dispatch(deleteJob(job._id));
+  }
 
   return (
     <Link
@@ -58,9 +68,13 @@ export function JobCard({ job }: { job: Job }) {
         <span className="text-muted">
           {applicantCount} candidate{applicantCount === 1 ? "" : "s"}
         </span>
-        <span className="inline-flex items-center gap-1 text-[var(--accent)]">
-          Open <ChevronRight size={14} className="transition group-hover:translate-x-0.5" />
-        </span>
+        <button
+          onClick={handleDelete}
+          className="inline-flex items-center justify-center rounded-[8px] p-1.5 text-muted transition hover:bg-red-500/10 hover:text-red-500"
+          aria-label="Delete job"
+        >
+          <Trash2 size={15} />
+        </button>
       </div>
     </Link>
   );
