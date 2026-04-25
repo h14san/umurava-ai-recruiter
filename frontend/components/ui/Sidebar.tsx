@@ -44,7 +44,7 @@ export function Sidebar({ mobileOpen = false, onCloseMobile }: SidebarProps) {
     <div className="flex h-full flex-col bg-surface">
       <div className="flex h-[52px] items-center justify-between border-b border-app px-4 lg:hidden">
         <span className="text-[22px] font-semibold tracking-[-0.03em] text-[#1D9E75]">
-          Candidate Ranking System
+          CRS.
         </span>
         <button
           type="button"

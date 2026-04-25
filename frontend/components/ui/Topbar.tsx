@@ -37,7 +37,7 @@ export function Topbar({ onToggleSidebar }: Props) {
           </button>
         )}
         <span className="text-[20px] font-bold tracking-tight text-[#1D9E75]">
-          competence<span className="text-[#1D9E75]">.</span>
+          Candidate Ranking System<span className="text-[#1D9E75]">.</span>
         </span>
       </div>
 
