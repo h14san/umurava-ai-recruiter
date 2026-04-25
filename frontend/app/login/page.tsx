@@ -38,12 +38,12 @@ export default function LoginPage() {
         <section className="hidden bg-[#04342C] px-10 py-12 lg:flex lg:items-center lg:justify-center">
           <div className="max-w-sm">
             <div className="text-[38px] font-semibold tracking-[-0.04em] text-[#1D9E75]">
-              HireAi.
+              Candidate Ranking System.
             </div>
             <h1 className="mt-8 text-[22px] font-semibold leading-[1.3] text-white">
               AI-powered screening.
               <br />
-              Human-led decisions.
+              Optimized for recruiter decision-making
             </h1>
             <div className="mt-8 space-y-4">
               {[
@@ -100,7 +100,7 @@ export default function LoginPage() {
               </Button>
             </form>
 
-            <p className="mt-8 text-center text-xs text-muted">Hire Ai</p>
+            <p className="mt-8 text-center text-xs text-muted">ⓒ 2026. Candidate Ranking System</p>
           </div>
         </section>
       </div>
