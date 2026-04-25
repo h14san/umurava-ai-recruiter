@@ -59,7 +59,6 @@ export function Sidebar({ mobileOpen = false, onCloseMobile }: SidebarProps) {
       <div className="flex flex-1 flex-col overflow-hidden px-3 py-4">
         <div className="mb-5 hidden px-2 lg:block">
           <span className="text-[24px] font-semibold tracking-[-0.03em] text-[#1D9E75]">
-            competence.
           </span>
         </div>
 
