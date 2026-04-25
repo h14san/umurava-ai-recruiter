@@ -100,7 +100,7 @@ export default function LoginPage() {
               </Button>
             </form>
 
-            <p className="mt-8 text-center text-xs text-muted">competence. by Umurava</p>
+            <p className="mt-8 text-center text-xs text-muted">Hire Ai</p>
           </div>
         </section>
       </div>
